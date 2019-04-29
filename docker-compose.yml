@@ -1,6 +1,7 @@
 version: "3"
 services:
   overture:
+    container_name: overture
     restart: always
     image: overture:latest
     volumes:
