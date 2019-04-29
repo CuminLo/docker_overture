@@ -1,0 +1,85 @@
+{
+  "BindAddress": ":53",
+  "DebugHTTPAddress": "127.0.0.1:5555",
+  "PrimaryDNS": [
+    {
+      "Name": "OpenDNS",
+      "Address": "208.67.222.222:443",
+      "Protocol": "tcp",
+      "SOCKS5Address": "",
+      "Timeout": 6,
+      "EDNSClientSubnet": {
+        "Policy": "auto",
+        "ExternalIP": "",
+        "NoCookie": true
+      }
+    },
+    {
+      "Name": "GoogleDNS",
+      "Address": "8.8.8.8:53",
+      "Protocol": "udp",
+      "SOCKS5Address": "",
+      "Timeout": 6,
+      "EDNSClientSubnet": {
+        "Policy": "auto",
+        "ExternalIP": "",
+        "NoCookie": true
+      }
+    },
+    {
+      "Name": "Cloudflare",
+      "Address": "1.1.1.1:53",
+      "Protocol": "udp",
+      "SOCKS5Address": "",
+      "Timeout": 6,
+      "EDNSClientSubnet": {
+        "Policy": "auto",
+        "ExternalIP": "",
+        "NoCookie": true
+      }
+    }
+  ],
+  "AlternativeDNS": [
+    {
+      "Name": "DNSPai",
+      "Address": "101.226.4.6:53",
+      "Protocol": "udp",
+      "SOCKS5Address": "",
+      "Timeout": 6,
+      "EDNSClientSubnet": {
+        "Policy": "auto",
+        "ExternalIP": "",
+        "NoCookie": false
+      }
+    },
+    {
+      "Name": "AliDNS",
+      "Address": "223.5.5.5:53",
+      "Protocol": "udp",
+      "SOCKS5Address": "",
+      "Timeout": 6,
+      "EDNSClientSubnet": {
+        "Policy": "auto",
+        "ExternalIP": "",
+        "NoCookie": false
+      }
+    }
+  ],
+  "OnlyPrimaryDNS": false,
+  "IPv6UseAlternativeDNS": false,
+  "WhenPrimaryDNSAnswerNoneUse": "PrimaryDNS",
+  "IPNetworkFile": {
+    "Primary": "./ip_network_primary_sample",
+    "Alternative": "./china_ip_list.txt"
+  },
+  "DomainFile": {
+    "Primary": "./gfw_all_domain.txt",
+    "Alternative": "",
+    "Matcher":  "regex-list"
+  },
+  "HostsFile": "",
+  "MinimumTTL": 600,
+  "DomainTTLFile" : "",
+  "CacheSize" : 2048,
+  "RejectQType": [255]
+}

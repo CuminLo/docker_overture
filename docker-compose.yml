@@ -1,0 +1,12 @@
+version: "3"
+services:
+  overture:
+    restart: always
+    image: overture:latest
+    volumes:
+      - "./conf:/etc/overture"
+    ports:
+      - "5354:53"
+      - "5354:53/udp"
+    cap_add:
+      - NET_ADMIN
